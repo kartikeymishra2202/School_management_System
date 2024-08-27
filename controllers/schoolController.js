@@ -11,7 +11,8 @@ const addSchool = (req, res) => {
     [name, address, latitude, longitude],
     (err, result) => {
       if (err) {
-        return res.status(500).json({ message: "Error adding school" });
+        return res.status(500).json({ message: err });
+        // "Error adding school"
       }
       res.status(201).json({ message: "School added successfully" });
     }
