@@ -11,7 +11,7 @@ const urlDB = `mysql://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${proce
 
 const connection = mysql.createConnection(urlDB);
 
-db.connect((err) => {
+connection.connect((err) => {
   if (err) {
     console.error("Database connection failed:", err.stack);
     return;
@@ -19,4 +19,4 @@ db.connect((err) => {
   console.log("Connected to MySQL database.");
 });
 
-module.exports = db;
+module.exports = connection;
