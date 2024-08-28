@@ -1,5 +1,6 @@
 const schoolService = require("../services/schoolService");
 
+
 const addSchool = (req, res) => {
   const { name, address, latitude, longitude } = req.body;
 
